@@ -21,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='h*#utm7%78d36rg_gpx36lb6i4j+s6jq-=ydhac%eds(33dng6')
+SECRET_KEY = 'h*#utm7%78d36rg_gpx36lb6i4j+s6jq-=ydhac%eds(33dng6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DJANGO_DEBUG', default = True, cast=bool)
+DEBUG = False
 
 ALLOWED_HOSTS = ['miguel-falcon-dev.github.io', '127.0.0.1:8000']
 
@@ -82,14 +82,8 @@ WSGI_APPLICATION = 'journal_practice.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db.journal',
-        'USER': 'MiguelFalcon',
-        'PASSWORD': '1F2a3L4c5O6n',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL'))
 }
 
 
@@ -149,6 +143,3 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-if config('DJANGO_PRODUCTION_ENV', default=False, cast=bool):
-    from .settings_production import *
