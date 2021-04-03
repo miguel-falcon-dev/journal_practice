@@ -147,5 +147,5 @@ CORS_ALLOW_CREDENTIALS = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-if config('DJANGO_PRODUCTION_ENV', default=False, cast=bool):
+if config('DJANGO_PRODUCTION', default=False, cast=bool):
     from .settings_production import *
