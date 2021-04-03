@@ -18,7 +18,7 @@ class Entry (models.Model):
 
     description = models.TextField('description')
 
-    photo = models.ImageField(upload_to='media', null=True)
+    photo = models.ImageField(null=True)
 
     time_stamp = models.DateTimeField(('time_stamp'), auto_now=False, auto_now_add=True, blank=False)
 
