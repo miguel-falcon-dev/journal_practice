@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY', default='h*#utm7%78d36rg_gpx36lb6i4j+s6jq-=ydh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default = True, cast=bool)
 
-ALLOWED_HOSTS = ['.herokuapp.com','.github.io', '127.0.0.1']
+ALLOWED_HOSTS = ['.herokuapp.com', 'journalpractice.herokuapp.com', 'miguel-falcon-dev.github.io', '.github.io', '127.0.0.1']
 
 
 # Application definition
