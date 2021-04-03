@@ -141,6 +141,10 @@ CORS_ALLOW_CREDENTIALS = True
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
+DROPBOX_OAUTH2_TOKEN = config('DROPBOX_OAUTH2_TOKEN', default = 'sl.AuSuBKKWMzDls6puI3DGUKCbqbx88ILX80fzl2E4Ltf6HhVu_GhPfsdQyZemJ-HMBo-rKz7ujZ7lAxUCPFujkz8gRtVhtSuZDh74WbCxrHe_nBxb2dWUM4rEabyQ3juBz2XaK0Om')
+DROPBOX_ROOT_PATH = 'media'
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

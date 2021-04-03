@@ -30,4 +30,4 @@ urlpatterns = [
     path('api-auth/', include ('rest_framework.urls')),
     path('blog/api/', EntriesListApiView.as_view()),
     path('blog/api/<int:entry_id>/', EntryDetailApiView.as_view()),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
