@@ -139,7 +139,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
 CORS_ALLOWED_ORIGINS = [
-    "https://miguel-falcon-dev.github.io/diario_html_2021/",
+    "https://miguel-falcon-dev.github.io",
     "http://127.0.0.1:8000"
 ]
 
