@@ -26,7 +26,7 @@ SECRET_KEY = 'h*#utm7%78d36rg_gpx36lb6i4j+s6jq-=ydhac%eds(33dng6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['miguel-falcon-dev.github.io', '127.0.0.1:8000']
 
 
 # Application definition
@@ -135,7 +135,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 MEDIA_URL = '/media/'
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    "https://miguel-falcon-dev.github.io",
+    "http://127.0.0.1:8000"
+]
 
 CORS_ALLOW_CREDENTIALS = True
 
