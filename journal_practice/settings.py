@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', default='h*#utm7%78d36rg_gpx36lb6i4j+s6jq-=ydhac%eds(33dng6')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DJANGO_DEBUG', default = True, cast=bool)
@@ -149,7 +149,7 @@ CORS_ALLOW_CREDENTIALS = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.dropbox.DropBoxStorage'
-DROPBOX_OAUTH2_TOKEN = config('DROPBOX_OAUTH2_TOKEN', default = 'sl.AuSuBKKWMzDls6puI3DGUKCbqbx88ILX80fzl2E4Ltf6HhVu_GhPfsdQyZemJ-HMBo-rKz7ujZ7lAxUCPFujkz8gRtVhtSuZDh74WbCxrHe_nBxb2dWUM4rEabyQ3juBz2XaK0Om')
+DROPBOX_OAUTH2_TOKEN = config('DROPBOX_OAUTH2_TOKEN')
 DROPBOX_ROOT_PATH = 'media'
 
 if config('DJANGO_PRODUCTION', default=False, cast=bool):
